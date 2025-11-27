@@ -3,18 +3,30 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Tower : MonoBehaviour
 {
+    [Header("기본 설정")]
     [SerializeField] private Projectile projectilePrefab;
     [SerializeField] private float fireInterval = 0.7f;
     [SerializeField] private float range = 4.5f;
+    [SerializeField] private int damage = 5;
 
+    [Header("업그레이드 설정")]
+    [SerializeField] private int maxLevel = 5;
+
+    private int currentLevel = 1;
     private float timer;
 
-    private void OnValidate()
+    public int CurrentLevel => currentLevel;
+
+    public void SetLevel(int level)
     {
-        if (projectilePrefab == null)
-            Debug.LogError($"[Tower:{name}] Projectile Prefab이 비어있습니다.", this);
-        if (range <= 0f)
-            Debug.LogWarning($"[Tower:{name}] 사거리(range)가 {range} 입니다.", this);
+        currentLevel = Mathf.Clamp(level, 1, maxLevel);
+        for (int i = 1; i < currentLevel; i++)
+        {
+            damage += 3;
+            range += 0.3f;
+            fireInterval = Mathf.Max(0.2f, fireInterval - 0.05f);
+        }
+        Debug.Log($"타워 생성! 레벨 {currentLevel}, 데미지 {damage}, 사거리 {range}");
     }
 
     private void Update()
@@ -26,25 +38,16 @@ public class Tower : MonoBehaviour
         if (target != null)
         {
             var p = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            p.damage = damage;
             p.Init(target);
             timer = 0f;
-        }
-        else
-        {
-            Debug.LogWarning($"[Tower:{name}] 사거리 {range} 내 적이 없습니다.");
-            timer = 0f; // 과도한 로그 방지용으로 쿨다운은 유지
         }
     }
 
     private Transform FindNearestEnemyInRange()
     {
         var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies == null || enemies.Length == 0)
-        {
-            // 태그 문제 디텍트
-            Debug.LogWarning("[Tower] 'Enemy' 태그를 가진 오브젝트가 하나도 없습니다. 프리팹 Tag를 'Enemy'로 설정하세요.");
-            return null;
-        }
+        if (enemies == null || enemies.Length == 0) return null;
 
         Transform best = null;
         float bestDist = float.MaxValue;
@@ -58,7 +61,6 @@ public class Tower : MonoBehaviour
                 bestDist = d;
             }
         }
-
         return best;
     }
 

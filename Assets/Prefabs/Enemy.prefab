@@ -190,3 +190,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 50
   healthbarPrefab: {fileID: 4012133742926461542, guid: 351baf954590df348a71254a311227b1, type: 3}
+  goldReward: 10

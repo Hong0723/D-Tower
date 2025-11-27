@@ -7,7 +7,7 @@ public class MainMenuScene: MonoBehaviour
 {
     public void GoPlayMap()
     {
-        SceneManager.LoadScene("Play Map");  // Map 씬 이름과 동일하게
+        SceneManager.LoadScene("WaveSpawnScene");  // Map 씬 이름과 동일하게
     }
 
     public void GoLogin()

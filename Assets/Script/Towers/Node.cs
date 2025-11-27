@@ -1,4 +1,3 @@
-// Scripts/Towers/Node.cs
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -27,13 +26,28 @@ public class Node : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (towerOnTop != null) return; // 이미 설치됨
-        var bm = BuildManager.I;
-        if (bm.selectedTower == null) return;
+        Debug.Log("Node 클릭됨!");
 
-        var bank = FindObjectOfType<GoldBank>();
-        if (!bank.Spend(bm.selectedCost)) return;
+        TowerSelectUI ui = FindObjectOfType<TowerSelectUI>();
+        if (ui == null)
+        {
+            Debug.Log("TowerSelectUI를 찾을 수 없음!");
+            return;
+        }
 
-        towerOnTop = Instantiate(bm.selectedTower, transform.position, Quaternion.identity);
+        if (towerOnTop == null)
+        {
+            Debug.Log("타워 없음 - ShowForNode 호출");
+            ui.ShowForNode(this);
+        }
+        else
+        {
+            Tower tower = towerOnTop.GetComponent<Tower>();
+            if (tower != null)
+            {
+                Debug.Log($"타워 있음 - 레벨 {tower.CurrentLevel}");
+                ui.ShowForUpgrade(this, tower.CurrentLevel);
+            }
+        }
     }
 }

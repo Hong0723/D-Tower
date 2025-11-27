@@ -9,7 +9,7 @@ public class DefeatScene : MonoBehaviour
     public void GoPlayMap()
     {
         ResumeTime();
-        SceneManager.LoadScene("Play Map");   // 정확한 씬 이름
+        SceneManager.LoadScene("WaveSpawnScene");  // 정확한 씬 이름
     }
 
     public void GoMainMenu()
