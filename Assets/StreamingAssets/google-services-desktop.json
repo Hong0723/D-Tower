@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "538655054719",
+    "project_id": "d-tower",
+    "storage_bucket": "d-tower.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538655054719:android:0323f7fded74944bbb584a",
+        "android_client_info": {
+          "package_name": "com.company.DTower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYyeiAGr_F3y7LJZOnSWRkIHpyw9hhMs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
