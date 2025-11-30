@@ -11,22 +11,51 @@ public class Tower : MonoBehaviour
 
     [Header("업그레이드 설정")]
     [SerializeField] private int maxLevel = 5;
+    [SerializeField] private Sprite[] levelSprites;   // ★ 1~5단계 스프라이트 넣기!
 
     private int currentLevel = 1;
     private float timer;
+    private SpriteRenderer sr;
 
     public int CurrentLevel => currentLevel;
+
+    private void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
     public void SetLevel(int level)
     {
         currentLevel = Mathf.Clamp(level, 1, maxLevel);
+
+        // ★ 능력치 증가
+        fireInterval = 0.7f;
+        range = 4.5f;
+        damage = 5;
+
         for (int i = 1; i < currentLevel; i++)
         {
             damage += 3;
             range += 0.3f;
             fireInterval = Mathf.Max(0.2f, fireInterval - 0.05f);
         }
+
+        // ★ 스프라이트 업데이트
+        UpdateSprite();
+
         Debug.Log($"타워 생성! 레벨 {currentLevel}, 데미지 {damage}, 사거리 {range}");
+    }
+
+    private void UpdateSprite()
+    {
+        if (levelSprites != null && levelSprites.Length >= currentLevel)
+        {
+            sr.sprite = levelSprites[currentLevel - 1];
+        }
+        else
+        {
+            Debug.LogWarning($"Tower: 레벨 {currentLevel} 스프라이트가 없음!");
+        }
     }
 
     private void Update()

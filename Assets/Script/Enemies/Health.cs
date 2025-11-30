@@ -25,6 +25,15 @@ public class Health : MonoBehaviour
         hb.Setup(transform, maxHP, currentHP);
     }
 
+    public void SetHealth(float hp)
+    {
+        maxHP = hp;
+        currentHP = hp;
+
+        if (hb != null)
+            hb.UpdateHealth(currentHP, maxHP);
+    }
+
     public void TakeDamage(float amount)
     {
         currentHP = Mathf.Clamp(currentHP - amount, 0f, maxHP);
@@ -38,14 +47,12 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
-        // 골드 지급
         GoldBank bank = FindObjectOfType<GoldBank>();
         if (bank != null)
         {
             bank.Earn(goldReward);
         }
 
-        // 점수 지급
         if (ScoreManager.Instance != null)
         {
             ScoreManager.Instance.AddScore(scoreReward);

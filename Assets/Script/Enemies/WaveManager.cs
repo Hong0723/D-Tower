@@ -1,18 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using UnityEngine;
 using TMPro;
 
 public class WaveManager : MonoBehaviour
 {
-    [Header("¿¬°áÇÒ ½ºÅ©¸³Æ®")]
+    [Header("ì—°ê²° ìŠ¤í¬ë¦½íŠ¸")]
     [SerializeField] private WaveSpawner spawner;
     [SerializeField] private TMP_Text waveText;
 
-    [Header("¿þÀÌºê µ¥ÀÌÅÍ")]
-    [SerializeField] private WaveData[] waves;  // ¿©·¯ ¿þÀÌºê ¼³Á¤
+    [Header("ì›¨ì´ë¸Œ ë°ì´í„° ë°°ì—´")]
+    [SerializeField] private WaveData[] waves;
 
-    [SerializeField] private float preStartDelay = 15f;   // Ã¹ ¿þÀÌºê ´ë±â
-    [SerializeField] private float intermissionTime = 20f;
+    [Header("ì›¨ì´ë¸Œ ê°„ ëŒ€ê¸° ì‹œê°„")]
+    [SerializeField] private float preStartDelay = 5f;
+    [SerializeField] private float intermissionTime = 5f;
 
     private int currentWave = 0;
 
@@ -23,11 +24,11 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator WaveRoutine()
     {
-        // Ã¹ ¿þÀÌºê ½ÃÀÛ Àü ´ë±â
         float timer = preStartDelay;
+
         while (timer > 0)
         {
-            waveText.text = $"Wave 1 ÁØºñ: {Mathf.Ceil(timer)}ÃÊ";
+            waveText.text = $"Wave 1 ì¤€ë¹„... {Mathf.Ceil(timer)}";
             timer -= Time.deltaTime;
             yield return null;
         }
@@ -36,42 +37,45 @@ public class WaveManager : MonoBehaviour
         {
             if (currentWave >= waves.Length)
             {
-                waveText.text = "°ÔÀÓ ½Â¸®";
+                waveText.text = "ê²Œìž„ ìŠ¹ë¦¬!";
                 yield break;
             }
 
             var wave = waves[currentWave];
             currentWave++;
-            Debug.Log($"Wave {currentWave} ½ÃÀÛ!");
 
-            // Wave ½ÃÀÛ ÅØ½ºÆ®
-            waveText.text = $"Wave {currentWave} ½ÃÀÛ!";
+            waveText.text = $"Wave {currentWave} ì‹œìž‘!";
             yield return new WaitForSeconds(1f);
 
-            // ½ºÆù ½ÃÀÛ
-            spawner.StartWave(wave.enemyCount, wave.spawnInterval);
+            spawner.StartWave(
+                wave.enemyPrefab,
+                wave.enemyCount,
+                wave.spawnInterval,
+                wave.speedMultiplier,
+                wave.health
+            );
 
-            // Wave ÁøÇà
             timer = wave.duration;
             while (timer > 0)
             {
-                waveText.text = $"Wave {currentWave}: {Mathf.Ceil(timer)}ÃÊ";
+                waveText.text = $"Wave {currentWave} ì§„í–‰... {Mathf.Ceil(timer)}";
                 timer -= Time.deltaTime;
                 yield return null;
             }
 
-            // ½ºÆù Á¾·á
             spawner.StopWave();
-            waveText.text = $"Wave {currentWave} Á¾·á!";
+            waveText.text = $"Wave {currentWave} ì¢…ë£Œ!";
             yield return new WaitForSeconds(1f);
 
-            // ´ë±â
-            timer = intermissionTime;
-            while (timer > 0)
+            if (currentWave < waves.Length)
             {
-                waveText.text = $"Wave {currentWave + 1} ÁØºñ: {Mathf.Ceil(timer)}ÃÊ";
-                timer -= Time.deltaTime;
-                yield return null;
+                timer = intermissionTime;
+                while (timer > 0)
+                {
+                    waveText.text = $"Wave {currentWave + 1} ì¤€ë¹„... {Mathf.Ceil(timer)}";
+                    timer -= Time.deltaTime;
+                    yield return null;
+                }
             }
         }
     }

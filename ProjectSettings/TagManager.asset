@@ -48,6 +48,12 @@ TagManager:
   - name: Actors
     uniqueID: 369122277
     locked: 0
+  - name: Node
+    uniqueID: 2761126519
+    locked: 0
+  - name: Tower
+    uniqueID: 315398619
+    locked: 0
   - name: UI
     uniqueID: 3777106517
     locked: 0

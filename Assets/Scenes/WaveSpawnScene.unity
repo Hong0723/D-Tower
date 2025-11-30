@@ -874,9 +874,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -1019,9 +1019,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -1376,9 +1376,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -1686,9 +1686,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -2031,19 +2031,187 @@ MonoBehaviour:
   spawner: {fileID: 1562493952}
   waveText: {fileID: 493780168}
   waves:
-  - enemyCount: 5
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
     spawnInterval: 3
-    duration: 15
-  - enemyCount: 8
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
+    enemyCount: 10
+    spawnInterval: 3
+    duration: 30
+    speedMultiplier: 1
+    health: 80
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 9c9514edf631d8643a7d0ceb9aac8d66, type: 3}
+    enemyCount: 1
+    spawnInterval: 3
+    duration: 40
+    speedMultiplier: 1
+    health: 500
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
     spawnInterval: 2
-    duration: 20
-  - enemyCount: 15
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
     spawnInterval: 2
-    duration: 20
-  - enemyCount: 15
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
     spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
+    enemyCount: 15
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 160
+  - enemyPrefab: {fileID: 2501999026674238799, guid: ee473aab845ede04fab8e834a0b2d9e1, type: 3}
+    enemyCount: 1
+    spawnInterval: 2
+    duration: 30
+    speedMultiplier: 1
+    health: 1600
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
     duration: 20
-  preStartDelay: 15
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
+    enemyCount: 20
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 240
+  - enemyPrefab: {fileID: 2501999026674238799, guid: 732432ecff4011342a2ea3ddb2c4816a, type: 3}
+    enemyCount: 1
+    spawnInterval: 1
+    duration: 20
+    speedMultiplier: 1
+    health: 2400
+  preStartDelay: 3
   intermissionTime: 20
 --- !u!4 &557281941
 Transform:
@@ -2310,9 +2478,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -3242,8 +3410,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
   m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
@@ -4412,7 +4580,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &920268682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5107,9 +5275,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -5859,9 +6027,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -6916,9 +7084,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -7019,7 +7187,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4192946cac393c4eb5cd39fe3ee2d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
   spawnPoint: {fileID: 1940637202}
   pathPoints:
   - {fileID: 427489727}
@@ -8016,9 +8183,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -8309,9 +8476,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -9070,9 +9237,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0
@@ -9517,9 +9684,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 369122277
-  m_SortingLayer: 2
-  m_SortingOrder: 10
+  m_SortingLayerID: -1533840777
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.12332817, g: 0.5283019, b: 0.07725169, a: 1}
   m_FlipX: 0

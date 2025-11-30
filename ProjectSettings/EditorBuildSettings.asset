@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Login.unity
     guid: 3207574a7f4b7364e98b7a24cab19b26
+  - enabled: 1
+    path: Assets/Scenes/WaveSpawnScene.unity
+    guid: 18f56ccfcbffe3b4e9d4fff5d12a119d
+  - enabled: 1
+    path: Assets/Scenes/Ranking.unity
+    guid: 14216c24e7b561d4482f1b2d52017a61
+  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: e90fa381310eeb546ac64c4071a74902
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: 141ccb73fbe3f73408a9ce267f90d02a
   m_configObjects: {}

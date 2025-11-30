@@ -18,8 +18,6 @@ public class EnemyMover : MonoBehaviour
             transform.position = waypoints[0].position;
     }
 
-    public void Setup(Transform[] points) => Init(points);
-
     public void SetSpeedMultiplier(float multiplier)
     {
         speedMultiplier = multiplier;
@@ -34,9 +32,14 @@ public class EnemyMover : MonoBehaviour
     {
         if (waypoints == null || currentIndex >= waypoints.Length) return;
 
-        Transform target = waypoints[currentIndex];
         float currentSpeed = speed * speedMultiplier;
-        transform.position = Vector2.MoveTowards(transform.position, target.position, currentSpeed * Time.deltaTime);
+        Transform target = waypoints[currentIndex];
+
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            target.position,
+            currentSpeed * Time.deltaTime
+        );
 
         if (Vector2.Distance(transform.position, target.position) < 0.05f)
         {
@@ -54,14 +57,11 @@ public class EnemyMover : MonoBehaviour
         if (playerHP != null)
         {
             if (isBoss)
-            {
                 playerHP.TakeDamage(playerHP.CurrentHP);
-            }
             else
-            {
                 playerHP.TakeDamage(damage);
-            }
         }
+
         Destroy(gameObject);
     }
 }

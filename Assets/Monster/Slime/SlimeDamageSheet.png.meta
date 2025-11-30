@@ -1,0 +1,533 @@
+fileFormatVersion: 2
+guid: 99ff0f8f7b977924bb188800d972023d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4075569038013859034
+    second: SlimeDamageSheet_0
+  - first:
+      213: -3193244154607436952
+    second: SlimeDamageSheet_1
+  - first:
+      213: 5664698580577606986
+    second: SlimeDamageSheet_2
+  - first:
+      213: -2108442191993695048
+    second: SlimeDamageSheet_3
+  - first:
+      213: -8337241136567950539
+    second: SlimeDamageSheet_4
+  - first:
+      213: 8637521627224501350
+    second: SlimeDamageSheet_5
+  - first:
+      213: 7191560478575306195
+    second: SlimeDamageSheet_6
+  - first:
+      213: 4631664146631850378
+    second: SlimeDamageSheet_7
+  - first:
+      213: -4534494532485946943
+    second: SlimeDamageSheet_8
+  - first:
+      213: -2254764378842135621
+    second: SlimeDamageSheet_9
+  - first:
+      213: 956250048324301445
+    second: SlimeDamageSheet_10
+  - first:
+      213: 2170633079227897226
+    second: SlimeDamageSheet_11
+  - first:
+      213: 3299778591881532972
+    second: SlimeDamageSheet_12
+  - first:
+      213: 523372307190751186
+    second: SlimeDamageSheet_13
+  - first:
+      213: 5103584483120883883
+    second: SlimeDamageSheet_14
+  - first:
+      213: -5073691494646892634
+    second: SlimeDamageSheet_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SlimeDamageSheet_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 103
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b7a9f9d8ba077c0800000000000000
+      internalID: -4075569038013859034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_1
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 103
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86bf7832c515fa3d0800000000000000
+      internalID: -3193244154607436952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 103
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ddcfe985d0d9e40800000000000000
+      internalID: 5664698580577606986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_3
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 103
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b415c45ffe4db2e0800000000000000
+      internalID: -2108442191993695048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_4
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 71
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 533e710eb5b2c4c80800000000000000
+      internalID: -8337241136567950539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 71
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66c687a0824aed770800000000000000
+      internalID: 8637521627224501350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 71
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d5283a172e8dc360800000000000000
+      internalID: 7191560478575306195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_7
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 71
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8977e2700af64040800000000000000
+      internalID: 4631664146631850378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 39
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1693b5f3d3211c0800000000000000
+      internalID: -4534494532485946943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_9
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 39
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb309e26eb775b0e0800000000000000
+      internalID: -2254764378842135621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 39
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 582f1de3a58454d00800000000000000
+      internalID: 956250048324301445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_11
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 39
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a855719f843af1e10800000000000000
+      internalID: 2170633079227897226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_12
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 7
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c269986752b2bcd20800000000000000
+      internalID: 3299778591881532972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 7
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df91672754634700800000000000000
+      internalID: 523372307190751186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_14
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 7
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba8ad952c0393d640800000000000000
+      internalID: 5103584483120883883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SlimeDamageSheet_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 7
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a7b6a99770a699b0800000000000000
+      internalID: -5073691494646892634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 644b068cb21a6104eae3e9da92650744
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SlimeDamageSheet_0: -4075569038013859034
+      SlimeDamageSheet_1: -3193244154607436952
+      SlimeDamageSheet_10: 956250048324301445
+      SlimeDamageSheet_11: 2170633079227897226
+      SlimeDamageSheet_12: 3299778591881532972
+      SlimeDamageSheet_13: 523372307190751186
+      SlimeDamageSheet_14: 5103584483120883883
+      SlimeDamageSheet_15: -5073691494646892634
+      SlimeDamageSheet_2: 5664698580577606986
+      SlimeDamageSheet_3: -2108442191993695048
+      SlimeDamageSheet_4: -8337241136567950539
+      SlimeDamageSheet_5: 8637521627224501350
+      SlimeDamageSheet_6: 7191560478575306195
+      SlimeDamageSheet_7: 4631664146631850378
+      SlimeDamageSheet_8: -4534494532485946943
+      SlimeDamageSheet_9: -2254764378842135621
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
