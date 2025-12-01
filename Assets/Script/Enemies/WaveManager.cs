@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaveManager : MonoBehaviour
 {
     [Header("연결 스크립트")]
     [SerializeField] private WaveSpawner spawner;
     [SerializeField] private TMP_Text waveText;
+
+    [Header("UI설정")]
+    [SerializeField] private GameObject winPanel;
 
     [Header("웨이브 데이터 배열")]
     [SerializeField] private WaveData[] waves;
@@ -37,7 +41,7 @@ public class WaveManager : MonoBehaviour
         {
             if (currentWave >= waves.Length)
             {
-                waveText.text = "게임 승리!";
+                GameWin();
                 yield break;
             }
 
@@ -78,5 +82,24 @@ public class WaveManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void GameWin()
+    {
+        Debug.Log("게임 클리어!");
+        waveText.text = "게임 승리!";
+
+        if (winPanel != null)
+        {
+            winPanel.SetActive(true);
+        }
+
+        Time.timeScale = 0;
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("MainMenu");
     }
 }
