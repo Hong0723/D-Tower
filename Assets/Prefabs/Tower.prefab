@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.01, y: 0.81, z: 0}
-  m_LocalScale: {x: 0.15, y: 0.15, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0261e73685924e84ea36dac81bf0fe94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5664819446695145560, guid: 3113bac51cd64a74dbfefd95a42d56ea, type: 3}
   fireInterval: 0.7
   range: 3
   damage: 5
@@ -108,3 +107,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 545d52cebfe93eb4db8eb7dadd7a6620, type: 3}
   - {fileID: 21300000, guid: a45ed72e725921448a37ae667b507d36, type: 3}
   - {fileID: 21300000, guid: 251ecd1c08614574182ad5a2524c8184, type: 3}
+  levelProjectiles:
+  - {fileID: 5664819446695145560, guid: 148df4ea5c22f2f42ae1869918cab444, type: 3}
+  - {fileID: 5664819446695145560, guid: 3113bac51cd64a74dbfefd95a42d56ea, type: 3}
+  - {fileID: 5664819446695145560, guid: 33cd78410a2da8f418b65d3c46989d78, type: 3}
+  - {fileID: 5664819446695145560, guid: 4a2defe7a4fa2034583c85b8f8c8e2d3, type: 3}
+  - {fileID: 5664819446695145560, guid: b1269d561d30b6f4fa9f5344c5cd9d92, type: 3}
+  levelHitVFX:
+  - {fileID: 369552488795132284, guid: bda2f20c14bf0684692e0884d3de96ef, type: 3}
+  - {fileID: 5057429535936888187, guid: 478d5bc820cc735498f9627d2578cc47, type: 3}
+  - {fileID: 1448261014195790984, guid: e6948e7412085f34493ba776ccacd0dd, type: 3}
+  - {fileID: 186856923862801830, guid: e35abf490e3d1c34b91144d863baa283, type: 3}
+  - {fileID: 9221408710979569449, guid: 1a2683c5d8ae5d247a93fdfa2cfb0477, type: 3}

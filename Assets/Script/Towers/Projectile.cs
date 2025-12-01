@@ -6,15 +6,26 @@ public class Projectile : MonoBehaviour
 {
     [Header("Flight")]
     public float speed = 8f;
-    public float hitRadius = 0.3f;      // 거리 판정 여유
+    public float hitRadius = 0.01f;      // 거리 판정 여유
     public float maxLifetime = 6f;      // 고아 탄 방지
 
     [Header("Damage")]
     public int damage = 5;
 
+    [Header("Effects")]
+    public GameObject hitVFXPrefab;
+
     private Transform target;
     private Rigidbody2D rb;
     private float life;
+    private float lastDist = Mathf.Infinity;
+
+
+    public void Init(Transform t)
+    {
+        target = t;
+        if (target == null) Destroy(gameObject);
+    }
 
     // 풀링 대비 초기화
     private void Awake()
@@ -36,32 +47,43 @@ public class Projectile : MonoBehaviour
         life = 0f;
     }
 
-    public void Init(Transform t)
-    {
-        target = t;
-    }
 
     private void FixedUpdate()
     {
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         life += Time.fixedDeltaTime;
-        if (life > maxLifetime) { Destroy(gameObject); return; }
+        if (life > maxLifetime)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        if (target == null) { Destroy(gameObject); return; }
+        // ---- 방향 회전 처리 ----
+        Vector2 dir = target.position - transform.position;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
 
-        // 이동
-        Vector2 pos = rb ? rb.position : (Vector2)transform.position;
-        Vector2 next = Vector2.MoveTowards(pos, target.position, speed * Time.fixedDeltaTime);
+        // ---- 이동 ----
+        Vector2 next = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
 
         if (rb) rb.MovePosition(next);
         else transform.position = next;
 
-        // 보정용 거리 히트
-        float dist = Vector2.Distance(next, target.position);
-        if (dist <= hitRadius)
+        float currentDist = Vector2.Distance(next, target.position);
+        // 핵심: "지나쳤을 때" 명중 처리
+        if (currentDist > lastDist)
         {
             ApplyDamage(target);
             Destroy(gameObject);
+            return;
         }
+
+        lastDist = currentDist;
     }
 
     // 콜라이더가 맞닿는 경우(Trigger)에도 처리
@@ -79,6 +101,10 @@ public class Projectile : MonoBehaviour
 
     private void ApplyDamage(Transform victim)
     {
+        if (hitVFXPrefab != null)
+        {
+            Instantiate(hitVFXPrefab, transform.position, Quaternion.identity);
+        }
         if (victim == null) return;
         var h = victim.GetComponent<Health>();
         if (h != null) h.TakeDamage(damage);
