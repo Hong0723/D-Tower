@@ -1,28 +1,25 @@
 using UnityEngine;
-using Firebase.Auth;
-using Firebase.Database;
 
 public class AuthManager : MonoBehaviour
 {
-    private DatabaseReference dbReference;
+    public static string Nickname { get; private set; }
 
-    private void Start()
+    public static void SetNickname(string nickname)
     {
-        dbReference = FirebaseDatabase.DefaultInstance.RootReference;
+        Nickname = nickname;
     }
 
-    public async void SignUp(string email, string password, string nickname)
+    public static string GetNickname()
+    {
+        return Nickname;
+    }
+
+    public async void SignUp(string email, string password)
     {
         try
         {
             var userCredential = await FirebaseInit.auth.CreateUserWithEmailAndPasswordAsync(email, password);
             FirebaseInit.user = userCredential.User;
-
-            await SaveNickname(FirebaseInit.user.UserId, nickname);
-
-            PlayerPrefs.SetString("Nickname", nickname);
-            PlayerPrefs.Save();
-
             Debug.Log("회원가입 성공");
         }
         catch (System.Exception e)
@@ -37,10 +34,10 @@ public class AuthManager : MonoBehaviour
         {
             var userCredential = await FirebaseInit.auth.SignInWithEmailAndPasswordAsync(email, password);
             FirebaseInit.user = userCredential.User;
-
-            await LoadNickname(FirebaseInit.user.UserId);
-
             Debug.Log("로그인 성공");
+
+            // Firebase DB / Firestore 에서 닉네임 가져오는 부분을 넣어야 함
+            // AuthManager.SetNickname(불러온_닉네임);
         }
         catch (System.Exception e)
         {
@@ -52,44 +49,7 @@ public class AuthManager : MonoBehaviour
     {
         FirebaseInit.auth.SignOut();
         FirebaseInit.user = null;
-        PlayerPrefs.DeleteKey("Nickname");
+        Nickname = null;
         Debug.Log("로그아웃 완료");
-    }
-
-    private async System.Threading.Tasks.Task SaveNickname(string userId, string nickname)
-    {
-        try
-        {
-            await dbReference.Child("users").Child(userId).Child("nickname").SetValueAsync(nickname);
-            Debug.Log("닉네임 저장 완료: " + nickname);
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogError("닉네임 저장 실패: " + e.Message);
-        }
-    }
-
-    private async System.Threading.Tasks.Task LoadNickname(string userId)
-    {
-        try
-        {
-            var snapshot = await dbReference.Child("users").Child(userId).Child("nickname").GetValueAsync();
-            if (snapshot.Exists)
-            {
-                string nickname = snapshot.Value.ToString();
-                PlayerPrefs.SetString("Nickname", nickname);
-                PlayerPrefs.Save();
-                Debug.Log("닉네임 불러오기: " + nickname);
-            }
-        }
-        catch (System.Exception e)
-        {
-            Debug.LogError("닉네임 불러오기 실패: " + e.Message);
-        }
-    }
-
-    public static string GetNickname()
-    {
-        return PlayerPrefs.GetString("Nickname", "Player");
     }
 }

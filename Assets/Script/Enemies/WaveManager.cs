@@ -28,13 +28,8 @@ public class WaveManager : MonoBehaviour
 
     private IEnumerator WaveRoutine()
     {
-        // 튜토리얼 끝날 때까지 대기
-        while (PlayerPrefs.GetInt("TutorialDone", 0) == 0)
-        {
-            yield return null;
-        }
-
         float timer = preStartDelay;
+
         while (timer > 0)
         {
             waveText.text = $"Wave 1 준비... {Mathf.Ceil(timer)}";
@@ -94,16 +89,12 @@ public class WaveManager : MonoBehaviour
         Debug.Log("게임 클리어!");
         waveText.text = "게임 승리!";
 
-        // 점수와 HP 저장
-        int score = ScoreManager.Instance != null ? ScoreManager.Instance.Score : 0;
-        int hp = FindObjectOfType<PlayerHP>() != null ? FindObjectOfType<PlayerHP>().CurrentHP : 0;
+        if (winPanel != null)
+        {
+            winPanel.SetActive(true);
+        }
 
-        PlayerPrefs.SetInt("FinalScore", score);
-        PlayerPrefs.SetInt("FinalHP", hp);
-        PlayerPrefs.Save();
-
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Win");
+        Time.timeScale = 0;
     }
 
     public void GoToMainMenu()

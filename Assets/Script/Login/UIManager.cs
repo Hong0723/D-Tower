@@ -1,18 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
-    public TMP_InputField nicknameInput;
     public AuthManager authManager;
 
     public void OnClickSignUp()
     {
-        string nickname = nicknameInput != null ? nicknameInput.text : "Player";
-        authManager.SignUp(emailInput.text, passwordInput.text, nickname);
+        authManager.SignUp(emailInput.text, passwordInput.text);
     }
 
     public void OnClickSignIn()
@@ -26,3 +27,4 @@ public class UIManager : MonoBehaviour
         authManager.SignOut();
     }
 }
+
