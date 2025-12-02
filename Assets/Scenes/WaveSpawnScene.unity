@@ -1029,7 +1029,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f7843e56956e346aba8c74d0029a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nicknameText: {fileID: 426821712}
 --- !u!4 &296336137
 Transform:
   m_ObjectHideFlags: 0
@@ -3463,17 +3462,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7094b523f87a14142a56726a25344559, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialPanel: {fileID: 862253109}
-  tutorialText: {fileID: 2036697777}
-  nextBtn: {fileID: 68901275}
-  skipBtn: {fileID: 1238121797}
-  highlightArrow: {fileID: 1052085540}
-  goldUI: {fileID: 116395814}
-  hpUI: {fileID: 1737396353}
-  scoreUI: {fileID: 610143923}
-  waveUI: {fileID: 493780167}
-  skillBtn: {fileID: 811176135}
-  towerSelectPanel: {fileID: 285760106}
 --- !u!4 &626775301
 Transform:
   m_ObjectHideFlags: 0

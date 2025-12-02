@@ -36,3 +36,8 @@ Assets/Plugins/Android/**/*.androidlib/
 # OS
 .DS_Store
 Thumbs.db
+
+[merge]
+    tool = unityyamlmerge
+[mergetool "unityyamlmerge"]
+    cmd = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
