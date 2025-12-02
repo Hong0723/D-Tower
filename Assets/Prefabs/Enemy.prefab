@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1521053005147137898}
   - component: {fileID: 3859539946693887945}
   - component: {fileID: -3845698054120077016}
-  - component: {fileID: -5539158248317024879}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -212,17 +211,3 @@ MonoBehaviour:
   downSprite: {fileID: -113379495, guid: 1d2a6f23d5ce2db4ba5475ba21baa893, type: 3}
   leftSprite: {fileID: -952987827, guid: e499d2cb538896f4e8dc8bb98d7d1560, type: 3}
   rightSprite: {fileID: 1596209043, guid: e499d2cb538896f4e8dc8bb98d7d1560, type: 3}
---- !u!114 &-5539158248317024879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2501999026674238799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59da929736671ae48a660f82f7ed3f23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathParent: {fileID: 0}
-  speed: 2
