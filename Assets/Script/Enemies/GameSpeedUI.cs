@@ -6,19 +6,28 @@ public class GameSpeedUI : MonoBehaviour
     [SerializeField] private GameSpeedManager gsm;
     [SerializeField] private TMP_Text buttonText;
 
+    private void OnEnable()
+    {
+        gsm.OnSpeedChanged += UpdateUI;
+    }
+
+    private void OnDisable()
+    {
+        gsm.OnSpeedChanged -= UpdateUI;
+    }
+
     void Start()
     {
-        UpdateUI();
+        UpdateUI(gsm.CurrentSpeed);
     }
 
     public void OnSpeedButtonClicked()
     {
         gsm.ToggleSpeed();
-        UpdateUI();
     }
 
-    private void UpdateUI()
+    private void UpdateUI(float speed)
     {
-        buttonText.text = $"{gsm.CurrentSpeed}x";
+        buttonText.text = $"{speed}x";
     }
 }
