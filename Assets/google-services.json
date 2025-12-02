@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "32520606150",
+    "firebase_url": "https://d-tower-a5216-default-rtdb.firebaseio.com",
+    "project_id": "d-tower-a5216",
+    "storage_bucket": "d-tower-a5216.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32520606150:android:91d1aa5373e6d236a062c7",
+        "android_client_info": {
+          "package_name": "com.yourcompany.dtower"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrCpDsO5JrBuVFBnjMW7Pm0p2OGATpM7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
