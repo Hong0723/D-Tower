@@ -23,11 +23,11 @@ public class AuthManager : MonoBehaviour
             PlayerPrefs.SetString("Nickname", nickname);
             PlayerPrefs.Save();
 
-            Debug.Log("È¸¿ø°¡ÀÔ ¼º°ø");
+            Debug.Log("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
         }
         catch (System.Exception e)
         {
-            Debug.LogError("È¸¿ø°¡ÀÔ ½ÇÆÐ: " + e.Message);
+            Debug.LogError("È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + e.Message);
         }
     }
 
@@ -40,11 +40,14 @@ public class AuthManager : MonoBehaviour
 
             await LoadNickname(FirebaseInit.user.UserId);
 
-            Debug.Log("·Î±×ÀÎ ¼º°ø");
+            Debug.Log("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+
+            // Firebase DB / Firestore ï¿½ï¿½ï¿½ï¿½ ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îºï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ ï¿½ï¿½
+            // AuthManager.SetNickname(ï¿½Ò·ï¿½ï¿½ï¿½_ï¿½Ð³ï¿½ï¿½ï¿½);
         }
         catch (System.Exception e)
         {
-            Debug.LogError("·Î±×ÀÎ ½ÇÆÐ: " + e.Message);
+            Debug.LogError("ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + e.Message);
         }
     }
 
@@ -53,7 +56,7 @@ public class AuthManager : MonoBehaviour
         FirebaseInit.auth.SignOut();
         FirebaseInit.user = null;
         PlayerPrefs.DeleteKey("Nickname");
-        Debug.Log("·Î±×¾Æ¿ô ¿Ï·á");
+        Debug.Log("ï¿½Î±×¾Æ¿ï¿½ ï¿½Ï·ï¿½");
     }
 
     private async System.Threading.Tasks.Task SaveNickname(string userId, string nickname)
@@ -61,11 +64,11 @@ public class AuthManager : MonoBehaviour
         try
         {
             await dbReference.Child("users").Child(userId).Child("nickname").SetValueAsync(nickname);
-            Debug.Log("´Ð³×ÀÓ ÀúÀå ¿Ï·á: " + nickname);
+            Debug.Log("ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï·ï¿½: " + nickname);
         }
         catch (System.Exception e)
         {
-            Debug.LogError("´Ð³×ÀÓ ÀúÀå ½ÇÆÐ: " + e.Message);
+            Debug.LogError("ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + e.Message);
         }
     }
 
@@ -79,12 +82,12 @@ public class AuthManager : MonoBehaviour
                 string nickname = snapshot.Value.ToString();
                 PlayerPrefs.SetString("Nickname", nickname);
                 PlayerPrefs.Save();
-                Debug.Log("´Ð³×ÀÓ ºÒ·¯¿À±â: " + nickname);
+                Debug.Log("ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½: " + nickname);
             }
         }
         catch (System.Exception e)
         {
-            Debug.LogError("´Ð³×ÀÓ ºÒ·¯¿À±â ½ÇÆÐ: " + e.Message);
+            Debug.LogError("ï¿½Ð³ï¿½ï¿½ï¿½ ï¿½Ò·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½: " + e.Message);
         }
     }
 
