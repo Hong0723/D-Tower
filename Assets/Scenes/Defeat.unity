@@ -802,8 +802,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC7AC\uB3C4\uC804"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 17816b1efb6e34b469d07e227f99a168, type: 2}
-  m_sharedMaterial: {fileID: -8671682465625882607, guid: 17816b1efb6e34b469d07e227f99a168, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
+  m_sharedMaterial: {fileID: -1984195138837961178, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

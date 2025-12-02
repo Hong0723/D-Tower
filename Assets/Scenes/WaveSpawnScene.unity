@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f7843e56956e346aba8c74d0029a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nicknameText: {fileID: 0}
+  nicknameText: {fileID: 426821712}
 --- !u!4 &296336137
 Transform:
   m_ObjectHideFlags: 0
@@ -1811,15 +1811,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
-  m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
+  m_sharedMaterial: {fileID: -1984195138837961178, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.78431374}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3670,7 +3670,7 @@ MonoBehaviour:
   scoreUI: {fileID: 610143923}
   waveUI: {fileID: 493780167}
   skillBtn: {fileID: 811176135}
-  towerSelectPanel: {fileID: 930391037}
+  towerSelectPanel: {fileID: 285760106}
 --- !u!4 &626775301
 Transform:
   m_ObjectHideFlags: 0
@@ -11046,15 +11046,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
-  m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
+  m_sharedMaterial: {fileID: -5815045721409112833, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0.6320754, g: 0.5754272, b: 0.5754272, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11077,7 +11077,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535

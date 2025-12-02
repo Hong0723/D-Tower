@@ -879,8 +879,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBA54\uC778\uBA54\uB274"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 17816b1efb6e34b469d07e227f99a168, type: 2}
-  m_sharedMaterial: {fileID: -8671682465625882607, guid: 17816b1efb6e34b469d07e227f99a168, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f66530c8b54b46f42815e2055745d8f3, type: 2}
+  m_sharedMaterial: {fileID: -1564600826632825034, guid: f66530c8b54b46f42815e2055745d8f3, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
