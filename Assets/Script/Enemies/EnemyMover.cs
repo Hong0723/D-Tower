@@ -10,12 +10,21 @@ public class EnemyMover : MonoBehaviour
     private int currentIndex = 0;
     private float speedMultiplier = 1f;
 
+    private SpriteRenderer sr;
+
+    private void Awake()
+    {
+        sr = GetComponentInChildren<SpriteRenderer>();
+    }
+
     public void Init(Transform[] points)
     {
         waypoints = points;
         currentIndex = 0;
         if (waypoints != null && waypoints.Length > 0)
             transform.position = waypoints[0].position;
+
+        UpdateFacing();
     }
 
     public void SetSpeedMultiplier(float multiplier)
@@ -44,11 +53,22 @@ public class EnemyMover : MonoBehaviour
         if (Vector2.Distance(transform.position, target.position) < 0.05f)
         {
             currentIndex++;
+            UpdateFacing();
+
             if (currentIndex >= waypoints.Length)
-            {
                 ReachEnd();
-            }
         }
+    }
+
+    private void UpdateFacing()
+    {
+        if (currentIndex < 3) sr.flipX = false; // 0~2
+        else if (currentIndex < 7) sr.flipX = true; // 2~6
+        else if (currentIndex < 13) sr.flipX = false; // 6~12
+        else if (currentIndex < 15) sr.flipX = true; // 12~14
+        else if (currentIndex < 19) sr.flipX = false; // 14~18
+        else if (currentIndex < 25) sr.flipX = true; // 18~23
+        else sr.flipX = false; // 23~27
     }
 
     private void ReachEnd()

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1914848570967698772}
   - component: {fileID: 1521053005147137898}
   - component: {fileID: 3859539946693887945}
-  - component: {fileID: -3845698054120077016}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -58,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f424bea4563e1e0419891d88de9643bb, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -195,19 +194,3 @@ MonoBehaviour:
   healthbarPrefab: {fileID: 4012133742926461542, guid: 351baf954590df348a71254a311227b1, type: 3}
   goldReward: 10
   scoreReward: 10
---- !u!114 &-3845698054120077016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2501999026674238799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9440ae71fe86e8e44aab0b17744886ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  upSprite: {fileID: -1621987873, guid: 1d2a6f23d5ce2db4ba5475ba21baa893, type: 3}
-  downSprite: {fileID: -113379495, guid: 1d2a6f23d5ce2db4ba5475ba21baa893, type: 3}
-  leftSprite: {fileID: -952987827, guid: e499d2cb538896f4e8dc8bb98d7d1560, type: 3}
-  rightSprite: {fileID: 1596209043, guid: e499d2cb538896f4e8dc8bb98d7d1560, type: 3}

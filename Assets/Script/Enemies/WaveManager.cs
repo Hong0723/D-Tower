@@ -9,8 +9,9 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private WaveSpawner spawner;
     [SerializeField] private TMP_Text waveText;
 
-    [Header("UI설정")]
+    [Header("UI 설정")]
     [SerializeField] private GameObject winPanel;
+    [SerializeField] private GameObject skipButton;
 
     [Header("웨이브 데이터 배열")]
     [SerializeField] private WaveData[] waves;
@@ -19,28 +20,34 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private float preStartDelay = 5f;
     [SerializeField] private float intermissionTime = 5f;
 
+    [Header("배경음")]
+    [SerializeField] private AudioClip normalBGM;
+    [SerializeField] private AudioClip bossBGM;
+
     private int currentWave = 0;
+    private bool isPreparing = false;
+    private float timer = 0f;
+
+    private Coroutine waveRoutine;
+
+    private static readonly int[] bossWaves = { 10, 20, 30 }; // 🔥 보스 라운드 목록
 
     private void Start()
     {
-        StartCoroutine(WaveRoutine());
+        skipButton.SetActive(false);
+
+        waveRoutine = StartCoroutine(WaveRoutine());
     }
 
     private IEnumerator WaveRoutine()
     {
-        // 튜토리얼 끝날 때까지 대기
         while (PlayerPrefs.GetInt("TutorialDone", 0) == 0)
-        {
             yield return null;
-        }
 
-        float timer = preStartDelay;
-        while (timer > 0)
-        {
-            waveText.text = $"Wave 1 준비... {Mathf.Ceil(timer)}";
-            timer -= Time.deltaTime;
-            yield return null;
-        }
+        // 첫 준비시간: 일반 BGM
+        AudioManager.Instance?.PlayBGM(normalBGM);
+        StartPrepare(preStartDelay);
+        yield return WaitForPrepare();
 
         while (true)
         {
@@ -50,19 +57,16 @@ public class WaveManager : MonoBehaviour
                 yield break;
             }
 
-            var wave = waves[currentWave];
+            WaveData wave = waves[currentWave];
             currentWave++;
 
+            // 🔥 웨이브 시작 시 UI 표시
             waveText.text = $"Wave {currentWave} 시작!";
             yield return new WaitForSeconds(1f);
 
-            spawner.StartWave(
-                wave.enemyPrefab,
-                wave.enemyCount,
-                wave.spawnInterval,
-                wave.speedMultiplier,
-                wave.health
-            );
+            // 🔥 웨이브 전투 시작
+            spawner.StartWave(wave.enemyPrefab, wave.enemyCount,
+                              wave.spawnInterval, wave.speedMultiplier, wave.health);
 
             timer = wave.duration;
             while (timer > 0)
@@ -78,23 +82,56 @@ public class WaveManager : MonoBehaviour
 
             if (currentWave < waves.Length)
             {
-                timer = intermissionTime;
-                while (timer > 0)
-                {
-                    waveText.text = $"Wave {currentWave + 1} 준비... {Mathf.Ceil(timer)}";
-                    timer -= Time.deltaTime;
-                    yield return null;
-                }
+                int nextWave = currentWave + 1;
+
+                // 🔥 다음 웨이브가 보스라면 Boss BGM 재생
+                if (System.Array.Exists(bossWaves, w => w == nextWave))
+                    AudioManager.Instance?.PlayBGM(bossBGM);
+                else
+                    AudioManager.Instance?.PlayBGM(normalBGM);
+
+                StartPrepare(intermissionTime);
+                yield return WaitForPrepare();
             }
+        }
+    }
+
+    private void StartPrepare(float time)
+    {
+        isPreparing = true;
+        timer = time;
+        skipButton.SetActive(true);
+    }
+
+    private IEnumerator WaitForPrepare()
+    {
+        while (timer > 0)
+        {
+            waveText.text = $"Wave {currentWave + 1} 준비... {Mathf.Ceil(timer)}";
+            timer -= Time.deltaTime;
+            yield return null;
+        }
+
+        EndPrepare();
+    }
+
+    private void EndPrepare()
+    {
+        isPreparing = false;
+        skipButton.SetActive(false);
+    }
+
+    public void SkipPrepareTime()
+    {
+        if (isPreparing)
+        {
+            timer = 0f;
         }
     }
 
     private void GameWin()
     {
-        Debug.Log("게임 클리어!");
         waveText.text = "게임 승리!";
-
-        // 점수와 HP 저장
         int score = ScoreManager.Instance != null ? ScoreManager.Instance.Score : 0;
         int hp = FindObjectOfType<PlayerHP>() != null ? FindObjectOfType<PlayerHP>().CurrentHP : 0;
 
@@ -104,11 +141,5 @@ public class WaveManager : MonoBehaviour
 
         Time.timeScale = 1f;
         SceneManager.LoadScene("Win");
-    }
-
-    public void GoToMainMenu()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("MainMenu");
     }
 }

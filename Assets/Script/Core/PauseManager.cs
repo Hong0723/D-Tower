@@ -51,7 +51,7 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = false;
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
+        GameSpeedManager.I.ResumeGame();
 
         // 스킬 버튼 다시 보이기
         if (skillToggleBtn != null)

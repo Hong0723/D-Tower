@@ -60,4 +60,15 @@ public class Health : MonoBehaviour
 
         Destroy(gameObject);
     }
+
+    // Health.cs 안에서 HP바 연결 부분
+    public void InitHealthbar()
+    {
+        if (healthbarPrefab != null)
+        {
+            var hb = Instantiate(healthbarPrefab, transform); // 부모: Enemy
+            hb.Setup(transform, maxHP, currentHP);
+        }
+    }
+
 }

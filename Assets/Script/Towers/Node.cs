@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
 public class Node : MonoBehaviour
@@ -26,18 +26,18 @@ public class Node : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("Node Å¬¸¯µÊ!");
+        Debug.Log("Node í´ë¦­ë¨!");
 
         TowerSelectUI ui = FindObjectOfType<TowerSelectUI>();
         if (ui == null)
         {
-            Debug.Log("TowerSelectUI¸¦ Ã£À» ¼ö ¾øÀ½!");
+            Debug.Log("TowerSelectUIë¥¼ ì°¾ì„ ìˆ˜ ì—†ìŒ!");
             return;
         }
 
         if (towerOnTop == null)
         {
-            Debug.Log("Å¸¿ö ¾øÀ½ - ShowForNode È£Ãâ");
+            Debug.Log("íƒ€ì›Œ ì—†ìŒ - ShowForNode í˜¸ì¶œ");
             ui.ShowForNode(this);
         }
         else
@@ -45,7 +45,7 @@ public class Node : MonoBehaviour
             Tower tower = towerOnTop.GetComponent<Tower>();
             if (tower != null)
             {
-                Debug.Log($"Å¸¿ö ÀÖÀ½ - ·¹º§ {tower.CurrentLevel}");
+                Debug.Log($"íƒ€ì›Œ ìˆìŒ - ë ˆë²¨ {tower.CurrentLevel}");
                 ui.ShowForUpgrade(this, tower.CurrentLevel);
             }
         }
