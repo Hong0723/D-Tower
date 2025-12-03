@@ -5,9 +5,11 @@ using UnityEngine.UI;
 public class PauseManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
-    [SerializeField] private Button soundBtn;
-    [SerializeField] private GameObject soundOnIcon;
-    [SerializeField] private GameObject soundOffIcon;
+    [SerializeField] private Image soundBtnImage;
+    [SerializeField] private Sprite soundOnSprite;
+    [SerializeField] private Sprite soundOffSprite;
+    [SerializeField] private Color soundOnColor = Color.green;
+    [SerializeField] private Color soundOffColor = Color.red;
     [SerializeField] private GameObject skillToggleBtn;
     [SerializeField] private GameObject skillPanel;
 
@@ -88,10 +90,11 @@ public class PauseManager : MonoBehaviour
 
     private void UpdateSoundUI()
     {
-        if (soundOnIcon != null)
-            soundOnIcon.SetActive(isSoundOn);
-        if (soundOffIcon != null)
-            soundOffIcon.SetActive(!isSoundOn);
+        if (soundBtnImage != null)
+        {
+            soundBtnImage.sprite = isSoundOn ? soundOnSprite : soundOffSprite;
+            soundBtnImage.color = isSoundOn ? soundOnColor : soundOffColor;
+        }
     }
 
     private void ApplySound()
