@@ -47,16 +47,14 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        AudioManager.Instance?.PlaySFX(AudioManager.Instance.monsterDie);
+
         GoldBank bank = FindObjectOfType<GoldBank>();
         if (bank != null)
-        {
             bank.Earn(goldReward);
-        }
 
         if (ScoreManager.Instance != null)
-        {
             ScoreManager.Instance.AddScore(scoreReward);
-        }
 
         Destroy(gameObject);
     }

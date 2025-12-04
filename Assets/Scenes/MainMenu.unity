@@ -581,6 +581,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 1174428751}
+  sfxSource: {fileID: 0}
+  towerShootBasic: {fileID: 8300000, guid: 24d5f775ade85894089b452d2283f144, type: 3}
+  towerShootLv5: {fileID: 0}
+  towerPlace: {fileID: 8300000, guid: 0dc45e11f84aa324f92528ba4e552db5, type: 3}
+  monsterDie: {fileID: 8300000, guid: 3f7b6096c553edc408fed8fb41139dbc, type: 3}
 --- !u!4 &1174428753
 Transform:
   m_ObjectHideFlags: 0

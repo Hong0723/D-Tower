@@ -2909,7 +2909,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1b197323357862a44b90b0f13b8f26d0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3006,7 +3006,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8cd550da6c2c6b04f9270b7d9659113d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
+  m_Volume: 0.509
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3118,6 +3118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bgmSource: {fileID: 587675170}
+  sfxSource: {fileID: 587675169}
+  towerShootBasic: {fileID: 8300000, guid: 24d5f775ade85894089b452d2283f144, type: 3}
+  towerShootLv5: {fileID: 0}
+  towerPlace: {fileID: 8300000, guid: 0dc45e11f84aa324f92528ba4e552db5, type: 3}
+  monsterDie: {fileID: 8300000, guid: 3f7b6096c553edc408fed8fb41139dbc, type: 3}
 --- !u!1 &588125181
 GameObject:
   m_ObjectHideFlags: 0
