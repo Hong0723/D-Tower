@@ -180,7 +180,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4ec48d2a405a7e24c8893b11b66a37f0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d56d0657e5ebb4449e37eb923554391, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1682,8 +1682,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Victory!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
-  m_sharedMaterial: {fileID: -5815045721409112833, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 1543653343fbb9e48b73ef3a3811bcda, type: 2}
+  m_sharedMaterial: {fileID: 4758002121161768884, guid: 1543653343fbb9e48b73ef3a3811bcda, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1691,13 +1691,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4278255594
   m_fontColor: {r: 0.9160466, g: 1, b: 0, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 1, g: 0.4009434, b: 0.4009434, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.2264151, g: 0.0501958, b: 0.0501958, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1707,8 +1707,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 110
-  m_fontSizeBase: 110
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
