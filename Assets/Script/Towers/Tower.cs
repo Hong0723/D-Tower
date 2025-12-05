@@ -86,12 +86,20 @@ public class Tower : MonoBehaviour
             if (levelHitVFX != null && levelHitVFX.Length >= currentLevel)
                 proj.hitVFXPrefab = levelHitVFX[currentLevel - 1];
 
+
+            // Update() 내부, Projectile 생성 바로 아래 줄에 추가
+            if (currentLevel == 5)
+                AudioManager.Instance?.PlaySFX(AudioManager.Instance.towerShootLv5);
+            else
+                AudioManager.Instance?.PlaySFX(AudioManager.Instance.towerShootBasic);
+
             // ★ 1~4레벨만 반동 적용
             if (currentLevel < 5)
                 StartCoroutine(RecoilRoutine());
 
             timer = 0f;
         }
+
     }
 
     private Transform FindNearestEnemyInRange()

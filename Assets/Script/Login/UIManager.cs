@@ -1,3 +1,4 @@
+// UIManager.cs
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
@@ -15,10 +16,17 @@ public class UIManager : MonoBehaviour
         authManager.SignUp(emailInput.text, passwordInput.text, nickname);
     }
 
-    public void OnClickSignIn()
+    public async void OnClickSignIn()
     {
-        authManager.SignIn(emailInput.text, passwordInput.text);
-        SceneManager.LoadScene("MainMenu");
+        bool success = await authManager.SignIn(emailInput.text, passwordInput.text);
+        if (success)
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        else
+        {
+            Debug.Log("로그인에 실패했습니다.");
+        }
     }
 
     public void OnClickSignOut()
