@@ -16205,7 +16205,7 @@ MonoBehaviour:
   freezeDuration: 3
   freezeSlowPercent: 0.5
   freezeCooldown: 15
-  freezeCost: 50
+  freezeCost: 30
   freezeOverlayGroup: {fileID: 670054701}
   freezeFadeInTime: 0.3
   freezeFadeOutTime: 0.5
@@ -20406,7 +20406,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7805b193da6d184dbe74ed642d720a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 239ddbc83287361409fd8d56851c6f6d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

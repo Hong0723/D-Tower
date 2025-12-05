@@ -21,7 +21,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private float freezeDuration = 3f;
     [SerializeField] private float freezeSlowPercent = 0.5f;
     [SerializeField] private float freezeCooldown = 15f;
-    [SerializeField] private int freezeCost = 50;
+    [SerializeField] private int freezeCost = 30;
     [SerializeField] private CanvasGroup freezeOverlayGroup;
     [SerializeField] private float freezeFadeInTime = 0.3f; 
     [SerializeField] private float freezeFadeOutTime = 0.5f;
