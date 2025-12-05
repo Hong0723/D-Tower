@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,7 +7,11 @@ public class SkillManager : MonoBehaviour
 {
     public static SkillManager Instance;
 
+    [Header("이펙트 프리팹")]
+    [SerializeField] private GameObject lightningEffectPrefab;
+
     [Header("스킬 설정 - 번개")]
+
     [SerializeField] private float lightningRadius = 2f;
     [SerializeField] private int lightningDamage = 30;
     [SerializeField] private float lightningCooldown = 10f;
@@ -17,6 +22,9 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private float freezeSlowPercent = 0.5f;
     [SerializeField] private float freezeCooldown = 15f;
     [SerializeField] private int freezeCost = 50;
+    [SerializeField] private CanvasGroup freezeOverlayGroup;
+    [SerializeField] private float freezeFadeInTime = 0.3f; 
+    [SerializeField] private float freezeFadeOutTime = 0.5f;
 
     [Header("스킬 설정 - 메테오")]
     [SerializeField] private float meteorRadius = 2.5f;
@@ -31,6 +39,7 @@ public class SkillManager : MonoBehaviour
     [SerializeField] private float logKnockback = 2f;
     [SerializeField] private float logCooldown = 12f;
     [SerializeField] private int logCost = 40;
+    [SerializeField] private Sprite logSprite;
 
     private Dictionary<string, float> cooldownTimers = new Dictionary<string, float>();
     private string selectedSkill = null;
@@ -154,13 +163,13 @@ public class SkillManager : MonoBehaviour
         if (skill == "log")
         {
             sr.sprite = CreateSquareSprite();
-            sr.color = new Color(0.55f, 0.27f, 0.07f, 0.7f);
+            sr.color = new Color(1f, 1f, 1f, 0.08f);
             currentIndicator.transform.localScale = new Vector3(2f, 0.8f, 1f);
         }
         else
         {
             sr.sprite = CreateCircleSprite();
-            sr.color = new Color(1f, 1f, 0f, 0.4f);
+            sr.color = new Color(1f, 1f, 1f, 0.08f);
 
             float radius = skill == "lightning" ? lightningRadius : meteorRadius;
             currentIndicator.transform.localScale = new Vector3(radius * 2, radius * 2, 1);
@@ -278,7 +287,14 @@ public class SkillManager : MonoBehaviour
     {
         cooldownTimers["lightning"] = lightningCooldown;
 
-        StartCoroutine(LightningEffect(position));
+        if (lightningEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(lightningEffectPrefab, position, Quaternion.identity);
+
+            ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+            float duration = ps != null ? ps.main.duration : 1f;
+            Destroy(effect, duration + 0.5f); 
+        }
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(position, lightningRadius);
         int hitCount = 0;
@@ -298,31 +314,14 @@ public class SkillManager : MonoBehaviour
         Debug.Log($"Lightning! {hitCount} enemies hit, {lightningDamage} damage");
     }
 
-    private IEnumerator LightningEffect(Vector3 position)
-    {
-        GameObject effect = new GameObject("LightningEffect");
-        effect.transform.position = position;
-        SpriteRenderer sr = effect.AddComponent<SpriteRenderer>();
-        sr.sprite = CreateCircleSprite();
-        sr.color = new Color(1f, 1f, 0f, 1f);
-        sr.sortingLayerName = "UI";
-        sr.sortingOrder = 1000;
-        effect.transform.localScale = new Vector3(lightningRadius * 2, lightningRadius * 2, 1);
-
-        for (int i = 0; i < 3; i++)
-        {
-            sr.color = new Color(1f, 1f, 1f, 1f);
-            yield return new WaitForSeconds(0.05f);
-            sr.color = new Color(1f, 1f, 0f, 0.8f);
-            yield return new WaitForSeconds(0.05f);
-        }
-
-        Destroy(effect);
-    }
-
     private void UseFreeze()
     {
         cooldownTimers["freeze"] = freezeCooldown;
+
+        if (freezeOverlayGroup != null)
+        {
+            StartCoroutine(PlayFreezeScreenEffect());
+        }
 
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
 
@@ -341,6 +340,32 @@ public class SkillManager : MonoBehaviour
             }
         }
         Debug.Log($"Freeze! {enemies.Length} enemies slowed");
+    }
+
+    private IEnumerator PlayFreezeScreenEffect()
+    {
+        float timer = 0f;
+        while (timer < freezeFadeInTime)
+        {
+            timer += Time.deltaTime;
+            freezeOverlayGroup.alpha = Mathf.Lerp(0f, 1f, timer / freezeFadeInTime);
+            yield return null;
+        }
+        freezeOverlayGroup.alpha = 1f; 
+
+        float waitTime = freezeDuration - (freezeFadeInTime + freezeFadeOutTime);
+        if (waitTime < 0) waitTime = 0.5f; 
+
+        yield return new WaitForSeconds(waitTime);
+
+        timer = 0f;
+        while (timer < freezeFadeOutTime)
+        {
+            timer += Time.deltaTime;
+            freezeOverlayGroup.alpha = Mathf.Lerp(1f, 0f, timer / freezeFadeOutTime);
+            yield return null;
+        }
+        freezeOverlayGroup.alpha = 0f;
     }
 
     private IEnumerator FreezeEnemy(EnemyMover mover)
@@ -432,11 +457,19 @@ public class SkillManager : MonoBehaviour
     {
         GameObject log = new GameObject("LogEffect");
         SpriteRenderer sr = log.AddComponent<SpriteRenderer>();
-        sr.sprite = CreateSquareSprite();
-        sr.color = new Color(0.55f, 0.27f, 0.07f, 1f);
+        if (logSprite != null)
+        {
+            sr.sprite = logSprite;
+            sr.color = Color.white;
+        }
+        else
+        {
+            sr.sprite = CreateSquareSprite();
+            sr.color = new Color(0.55f, 0.27f, 0.07f, 1f);
+        }
         sr.sortingLayerName = "UI";
         sr.sortingOrder = 1000;
-        log.transform.localScale = new Vector3(1.5f, 0.8f, 1f);
+        log.transform.localScale = new Vector3(0.08f, 0.08f, 1f);
         log.transform.position = startPos;
 
         float traveled = 0f;
