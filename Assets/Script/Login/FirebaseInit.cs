@@ -1,3 +1,4 @@
+// FirebaseInit.cs
 using Firebase;
 using Firebase.Auth;
 using Firebase.Extensions;
