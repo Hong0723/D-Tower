@@ -17,4 +17,10 @@ public class DefeatScene : MonoBehaviour
         ResumeTime();
         SceneManager.LoadScene("MainMenu");   // 정확한 씬 이름
     }
+
+    public void GoRankingMenu()
+    {
+        ResumeTime();
+        SceneManager.LoadScene("Ranking");   // 정확한 씬 이름
+    }
 }
