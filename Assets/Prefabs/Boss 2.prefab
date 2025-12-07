@@ -164,8 +164,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  damage: 1
-  isBoss: 0
+  damage: 10
+  isBoss: 1
 --- !u!114 &1521053005147137898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,5 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 50
   healthbarPrefab: {fileID: 4012133742926461542, guid: 351baf954590df348a71254a311227b1, type: 3}
-  goldReward: 10
-  scoreReward: 10
+  goldReward: 1000
+  scoreReward: 1000
+  isBoss: 1
+  bossReward: 1000

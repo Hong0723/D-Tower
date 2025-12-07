@@ -636,7 +636,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gold : 500'
+  m_text: 'Gold : 200'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
   m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
@@ -6298,6 +6298,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395951258}
   - component: {fileID: 395951257}
+  - component: {fileID: 395951259}
   m_Layer: 0
   m_Name: GoldBank
   m_TagString: Untagged
@@ -6317,7 +6318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6033faac30261d49984e4c50e8bd439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 300
+  gold: 200
 --- !u!4 &395951258
 Transform:
   m_ObjectHideFlags: 0
@@ -6333,6 +6334,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395951259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395951256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c84aff62759bf7a4089053800bec13c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goldText: {fileID: 116395815}
 --- !u!1 &402331142
 GameObject:
   m_ObjectHideFlags: 0
@@ -11988,7 +12002,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "3\uB2E8\uACC4\n50G"
+  m_text: "3\uB2E8\uACC4\n100G"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
   m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
@@ -12409,43 +12423,43 @@ MonoBehaviour:
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 100
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 120
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 140
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 160
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 180
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 200
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
     duration: 30
     speedMultiplier: 1
-    health: 80
+    health: 220
   - enemyPrefab: {fileID: 2501999026674238799, guid: 111fca2e086dc8d408fbb22b42ab6749, type: 3}
     enemyCount: 10
     spawnInterval: 3
@@ -12456,129 +12470,129 @@ MonoBehaviour:
     enemyCount: 1
     spawnInterval: 3
     duration: 30
-    speedMultiplier: 1
-    health: 500
+    speedMultiplier: 0.7
+    health: 2000
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 300
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 320
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 340
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 360
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 380
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 400
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 420
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 440
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
     enemyCount: 15
     spawnInterval: 2
     duration: 30
     speedMultiplier: 1
-    health: 160
+    health: 460
   - enemyPrefab: {fileID: 2501999026674238799, guid: ee473aab845ede04fab8e834a0b2d9e1, type: 3}
     enemyCount: 1
     spawnInterval: 2
     duration: 30
-    speedMultiplier: 1
-    health: 1600
+    speedMultiplier: 0.7
+    health: 6000
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 650
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 700
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 750
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 800
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 800
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 850
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 900
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 950
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
     enemyCount: 20
     spawnInterval: 1
     duration: 30
     speedMultiplier: 1
-    health: 240
+    health: 1000
   - enemyPrefab: {fileID: 2501999026674238799, guid: 732432ecff4011342a2ea3ddb2c4816a, type: 3}
     enemyCount: 1
     spawnInterval: 1
     duration: 30
-    speedMultiplier: 1
-    health: 2400
-  preStartDelay: 3
+    speedMultiplier: 0.5
+    health: 40000
+  preStartDelay: 20
   intermissionTime: 20
   normalBGM: {fileID: 8300000, guid: 8cd550da6c2c6b04f9270b7d9659113d, type: 3}
   bossBGM: {fileID: 8300000, guid: 1b197323357862a44b90b0f13b8f26d0, type: 3}
@@ -12898,7 +12912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4\uB2E8\uACC4\n80G"
+  m_text: "4\uB2E8\uACC4\n400G"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
   m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
@@ -13569,7 +13583,7 @@ MonoBehaviour:
   nextBtn: {fileID: 68901275}
   skipBtn: {fileID: 1238121797}
   highlightArrow: {fileID: 1052085540}
-  goldUI: {fileID: 116395814}
+  goldUI: {fileID: 0}
   hpUI: {fileID: 1737396353}
   scoreUI: {fileID: 610143923}
   waveUI: {fileID: 493780167}
@@ -14763,7 +14777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "5\uB2E8\uACC4\n200G"
+  m_text: "5\uB2E8\uACC4\n1000G"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
   m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
@@ -16039,7 +16053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerOnTop: {fileID: 0}
-  hoverColor: {r: 0.11725702, g: 0.2924528, b: 0.11725702, a: 1}
+  hoverColor: {r: 0.15886436, g: 0.3962264, b: 0.18821092, a: 1}
 --- !u!61 &1069262247
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16487,7 +16501,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2\uB2E8\uACC4\n30G"
+  m_text: "2\uB2E8\uACC4\n50G"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
   m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
@@ -16778,67 +16792,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1262445874
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1262445877}
-  - component: {fileID: 1262445876}
-  - component: {fileID: 1262445875}
-  m_Layer: 0
-  m_Name: GameSystems
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1262445875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262445874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dde30d1e984c304d9f9ea5cb5f7bb5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectedTower: {fileID: 5638257077968686605, guid: c9cd1d0aeb4c4b144956335ae434a327, type: 3}
-  selectedCost: 100
-  selectedLevel: 1
---- !u!114 &1262445876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262445874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6033faac30261d49984e4c50e8bd439, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gold: 600
---- !u!4 &1262445877
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1262445874}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1280130493
 GameObject:
   m_ObjectHideFlags: 0
@@ -17182,7 +17135,7 @@ MonoBehaviour:
   - {fileID: 588125183}
   - {fileID: 848237382}
   towerPrefab: {fileID: 5638257077968686605, guid: c9cd1d0aeb4c4b144956335ae434a327, type: 3}
-  towerCosts: 0a0000001e0000003200000050000000c8000000
+  towerCosts: 0a000000320000006400000090010000e8030000
 --- !u!114 &1347779775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21520,7 +21473,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1430300250}
   - {fileID: 1626517071}
-  - {fileID: 1262445877}
   - {fileID: 1347779772}
   - {fileID: 1562493953}
   - {fileID: 557281941}

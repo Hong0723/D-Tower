@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 369122277
   m_SortingLayer: 2
   m_SortingOrder: 5
-  m_Sprite: {fileID: 4723107735738678597, guid: 08eeeb0c127442b40acfafa27a46fac3, type: 3}
+  m_Sprite: {fileID: 4723107735738678597, guid: b2b18d1baf2943143a6ca222f308aa8d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -192,5 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 50
   healthbarPrefab: {fileID: 4012133742926461542, guid: 351baf954590df348a71254a311227b1, type: 3}
-  goldReward: 10
-  scoreReward: 10
+  goldReward: 20
+  scoreReward: 20
+  isBoss: 0
+  bossReward: 500

@@ -73,15 +73,17 @@ public class EnemyMover : MonoBehaviour
 
     private void ReachEnd()
     {
-        PlayerHP playerHP = FindObjectOfType<PlayerHP>();
-        if (playerHP != null)
+        PlayerHP player = FindObjectOfType<PlayerHP>();
+
+        if (player != null)
         {
             if (isBoss)
-                playerHP.TakeDamage(playerHP.CurrentHP);
+                player.TakeDamage(10); // 보스 통과시 10 데미지
             else
-                playerHP.TakeDamage(damage);
+                player.TakeDamage(damage);  // 일반 몬스터는 damage 사용
         }
 
         Destroy(gameObject);
     }
+
 }

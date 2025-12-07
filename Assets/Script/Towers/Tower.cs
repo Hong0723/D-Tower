@@ -5,7 +5,7 @@ using System.Collections;
 public class Tower : MonoBehaviour
 {
     [Header("기본 설정")]
-    [SerializeField] private float fireInterval = 0.7f;
+    [SerializeField] private float fireInterval = 0.9f;
     [SerializeField] private float range = 4.5f;
     [SerializeField] private int damage = 5;
 
@@ -35,7 +35,7 @@ public class Tower : MonoBehaviour
         currentLevel = Mathf.Clamp(level, 1, maxLevel);
 
         // 기본 능력치 초기화
-        fireInterval = 0.7f;
+        fireInterval = 0.9f;
         range = 4.5f;
         damage = 5;
 
@@ -51,7 +51,8 @@ public class Tower : MonoBehaviour
         if (currentLevel == 5)
         {
             fireInterval = 0.01f;
-            damage = Mathf.RoundToInt(damage * 0.1f);
+            damage = 2;
+
         }
 
         UpdateSprite();

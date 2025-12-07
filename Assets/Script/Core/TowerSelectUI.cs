@@ -11,7 +11,7 @@ public class TowerSelectUI : MonoBehaviour
 
     [Header("타워 설정")]
     [SerializeField] private GameObject towerPrefab;
-    [SerializeField] private int[] towerCosts = { 10, 30, 50, 80, 200 };
+    [SerializeField] private int[] towerCosts = { 10, 50, 100, 300, 500 };
 
     private Node currentNode;
     private bool isUpgradeMode = false;
@@ -100,7 +100,7 @@ public class TowerSelectUI : MonoBehaviour
             tower.SetLevel(level);
         }
         currentNode.towerOnTop = newTower;
-
+        currentNode.SetPlacedColor();
         Debug.Log($"{level}단계 타워 설치! -{cost}G");
         Hide();
     }

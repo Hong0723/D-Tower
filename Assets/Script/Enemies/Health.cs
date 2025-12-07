@@ -7,6 +7,8 @@ public class Health : MonoBehaviour
     [SerializeField] private Healthbar healthbarPrefab;
     [SerializeField] private int goldReward = 5;
     [SerializeField] private int scoreReward = 10;
+    [SerializeField] private bool isBoss = false;
+    [SerializeField] private int bossReward = 500; // 보스 처치 보상 점수/골드
 
     private float currentHP;
     private Healthbar hb;
@@ -49,15 +51,17 @@ public class Health : MonoBehaviour
     {
         AudioManager.Instance?.PlaySFX(AudioManager.Instance.monsterDie);
 
+        ScoreManager.Instance?.AddScore(isBoss ? bossReward * 2 : scoreReward);
+
         GoldBank bank = FindObjectOfType<GoldBank>();
         if (bank != null)
-            bank.Earn(goldReward);
-
-        if (ScoreManager.Instance != null)
-            ScoreManager.Instance.AddScore(scoreReward);
+        {
+            bank.Earn(isBoss ? bossReward : goldReward);
+        }
 
         Destroy(gameObject);
     }
+
 
     // Health.cs 안에서 HP바 연결 부분
     public void InitHealthbar()

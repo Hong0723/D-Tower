@@ -16,11 +16,15 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
+        if (towerOnTop != null) return;
+
         if (sr != null) sr.color = hoverColor;
     }
 
     void OnMouseExit()
     {
+        if (towerOnTop != null) return;
+
         if (sr != null) sr.color = originColor;
     }
 
@@ -49,5 +53,11 @@ public class Node : MonoBehaviour
                 ui.ShowForUpgrade(this, tower.CurrentLevel);
             }
         }
+    }
+
+    public void SetPlacedColor()
+    {
+        if (sr != null)
+            sr.color = new Color32(0, 0, 0, 255);   // 검정
     }
 }

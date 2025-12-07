@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GoldBank : MonoBehaviour
 {
-    public int gold = 500;                      // Ω√¿€ ∞ÒµÂ
+    public int gold = 200;                      // Ω√¿€ ∞ÒµÂ
     public System.Action<int> OnGoldChanged;
 
     public bool Spend(int amount)
