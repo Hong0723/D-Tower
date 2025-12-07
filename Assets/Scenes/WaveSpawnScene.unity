@@ -6318,7 +6318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6033faac30261d49984e4c50e8bd439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gold: 200
+  gold: 100
 --- !u!4 &395951258
 Transform:
   m_ObjectHideFlags: 0
@@ -12272,8 +12272,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uBC30\uC18D"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
-  m_sharedMaterial: {fileID: -1984195138837961178, guid: 3c14fcea74032ef45bbe4f8660bd7e0b, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
+  m_sharedMaterial: {fileID: -5815045721409112833, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12738,7 +12738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8cd550da6c2c6b04f9270b7d9659113d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.509
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -13583,7 +13583,7 @@ MonoBehaviour:
   nextBtn: {fileID: 68901275}
   skipBtn: {fileID: 1238121797}
   highlightArrow: {fileID: 1052085540}
-  goldUI: {fileID: 0}
+  goldUI: {fileID: 116395814}
   hpUI: {fileID: 1737396353}
   scoreUI: {fileID: 610143923}
   waveUI: {fileID: 493780167}
@@ -14635,8 +14635,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 350, y: -41}
-  m_SizeDelta: {x: 80, y: 40}
+  m_AnchoredPosition: {x: 360, y: -60}
+  m_SizeDelta: {x: 85, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &811176136
 MonoBehaviour:
@@ -19399,8 +19399,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 140}
-  m_SizeDelta: {x: 120, y: 30}
+  m_AnchoredPosition: {x: 410, y: 140}
+  m_SizeDelta: {x: 93, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1862256724
 MonoBehaviour:
@@ -19800,7 +19800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1957676739
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19818,8 +19818,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 95}
-  m_SizeDelta: {x: 80, y: 30}
+  m_AnchoredPosition: {x: 360, y: 95}
+  m_SizeDelta: {x: 80, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1957676740
 MonoBehaviour:
@@ -20577,7 +20577,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 80, y: 40}
+  m_SizeDelta: {x: 90, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &2046427990
 MonoBehaviour:
@@ -20601,15 +20601,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\uC2A4\uD0AC"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
-  m_sharedMaterial: {fileID: -3385828859165243471, guid: ce95b42b9ecbd0f4c89c359addeb21de, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
+  m_sharedMaterial: {fileID: -5815045721409112833, guid: 37c8bc35dde3cb045b1964a14ed8b718, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278203395
-  m_fontColor: {r: 0.012547528, g: 0.2028302, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20626,8 +20626,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21
-  m_fontSizeBase: 21
+  m_fontSize: 17
+  m_fontSizeBase: 17
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -21265,7 +21265,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -21283,8 +21283,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 16
+  m_fontSizeBase: 16
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
