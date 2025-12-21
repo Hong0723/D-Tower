@@ -12469,7 +12469,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2501999026674238799, guid: 9c9514edf631d8643a7d0ceb9aac8d66, type: 3}
     enemyCount: 1
     spawnInterval: 3
-    duration: 30
+    duration: 60
     speedMultiplier: 0.7
     health: 2000
   - enemyPrefab: {fileID: 2501999026674238799, guid: edea7ab252a7d16499d3e2793389476f, type: 3}
@@ -12529,7 +12529,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2501999026674238799, guid: ee473aab845ede04fab8e834a0b2d9e1, type: 3}
     enemyCount: 1
     spawnInterval: 2
-    duration: 30
+    duration: 60
     speedMultiplier: 0.7
     health: 6000
   - enemyPrefab: {fileID: 2501999026674238799, guid: 94927a4017584424db56e365d39e0444, type: 3}
@@ -12589,7 +12589,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 2501999026674238799, guid: 732432ecff4011342a2ea3ddb2c4816a, type: 3}
     enemyCount: 1
     spawnInterval: 1
-    duration: 30
+    duration: 60
     speedMultiplier: 0.5
     health: 40000
   preStartDelay: 20
