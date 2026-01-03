@@ -1,0 +1,43 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+Obj/
+
+# StreamingAssets의 민감 키/설정(커밋 금지)
+Assets/StreamingAssets/google-services-desktop.json
+Assets/StreamingAssets/google-services.json
+Assets/StreamingAssets/GoogleService-Info.plist
+Assets/Firebase/Plugins/x86_64/**
+
+# EDM4U(External Dependency Manager) 캐시/생성물 무시(필수 소스/설정은 커밋)
+Assets/Plugins/Android/**/m2repository/
+Assets/Plugins/Android/**/.gradle/
+Assets/Plugins/Android/**/gradle/
+Assets/Plugins/Android/**/build/
+Assets/Plugins/Android/**/*.sha1
+# 필요 시: .resolved/ .androidlib 등 로컬 빌드 산출물도 무시
+Assets/Plugins/Android/**/*.androidlib/ 
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.unityproj
+
+# OS
+.DS_Store
+Thumbs.db
+
+[merge]
+    tool = unityyamlmerge
+[mergetool "unityyamlmerge"]
+    cmd = 'C:/Program Files/Unity/Hub/Editor/2022.3.62f2/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p "$BASE" "$REMOTE" "$LOCAL" "$MERGED"
