@@ -4,7 +4,16 @@
 [게임 다운로드 · itch.io](https://hong0723.itch.io/d-tower)
 
 ## 플레이 영상 · 스크린샷
-추후 추가 예정입니다.
+[![플레이 미리보기](docs/media/preview.gif)](https://github.com/Hong0723/D-Tower/blob/Main/docs/media/gameplay.mp4)
+
+[전체 플레이 영상 · MP4](https://github.com/Hong0723/D-Tower/blob/Main/docs/media/gameplay.mp4) · [다운로드](https://github.com/Hong0723/D-Tower/raw/refs/heads/Main/docs/media/gameplay.mp4) · 1080p / 30fps
+
+<details>
+<summary>스크린샷 보기</summary>
+
+![게임플레이 화면](docs/media/screenshot.png)
+
+</details>
 
 ## 게임 소개
 제한된 골드로 타워를 설치·강화하고 스킬을 사용해 적의 이동 경로를 방어합니다. 웨이브가 진행될수록 강해지는 적에 맞춰 타워와 자원을 관리하는 게임입니다.
